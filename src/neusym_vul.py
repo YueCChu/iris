@@ -532,21 +532,18 @@ class SAPipeline:
                     {"role": "user", "content": user_prompt},
                 ]
 
-                # 4.4. Parse the GPT result
-                #json_result = self.parse_json(result)
-                #return json_result
-
             # 5. Iterate through all batches and generate result
             args = range(0, len(to_query_candidates), self.label_api_batch_size)
             indiv_prompts = [process_candidate_batch(i) for i in args]
             indiv_results = []
             responses = self.get_model().predict(indiv_prompts, batch_size=self.num_threads)
-            for i, response in zip(args, responses):
+            self.project_logger.info(f"responses received, start parsing...")
+            for i, response in tqdm(zip(args, responses), total=len(args), desc="Parsing LLM responses"):
                 json_result = self.parse_json(response)
                 with open(f"{self.label_api_log_path}/raw_llm_response_{i}.txt", "w") as f:
                     f.write(str(response) + "\n")
                 indiv_results.append(json_result)
-
+            self.project_logger.info(f"responses parsed, start merging...")
             # 6. Merge all the results
             merged_llm_results = []
             for indiv_result in indiv_results:
@@ -723,7 +720,7 @@ class SAPipeline:
             indiv_prompts = [process_candidate_batch(i) for i in args]
             indiv_results = []
             responses = self.get_model().predict(indiv_prompts, batch_size=self.num_threads)
-            for i, response in zip(args, responses):
+            for i, response in tqdm(zip(args, responses), total=len(args), desc="Parsing LLM func param responses"):
                 json_result = self.parse_json(response)
                 with open(f"{self.label_func_params_log_path}/raw_llm_response_{i}.txt", "w") as f:
                         f.write(response + "\n")
@@ -1159,7 +1156,7 @@ class SAPipeline:
         contextual_analysis_pipeline.run()
 
     def build_evaluation_pipeline(self):
-        return EvaluationPipeline(
+        eval_pipeline_instance = EvaluationPipeline(
             self.project_fixed_methods,
             self.class_locs_path,
             self.func_locs_path,
@@ -1177,7 +1174,11 @@ class SAPipeline:
             self.project_logger,
             overwrite=self.overwrite or self.overwrite_posthoc_filter or self.overwrite_cwe_query_result,
             test_run=self.test_run,
+            output_tp_codeflow=True,
+            tp_codeflow_output_file=os.path.join(self.final_output_path, f"tp_codeflows_{self.query}.txt")
         )
+        eval_pipeline_instance.query_name = self.query # self.query 包含了当前的查询名 (e.g., "cwe-022wLLM")
+        return eval_pipeline_instance
 
     def evaluate_result(self):
         self.project_logger.info("==> Stage 9: Evaluating results...")
