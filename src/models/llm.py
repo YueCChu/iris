@@ -38,6 +38,9 @@ class LLM:
         # nothing else needed if calling together AI
         elif "-tai" in model_name.lower():
             return
+        # nothing else needed if calling deepseek
+        elif model_name.lower().startswith("deepseek"):
+            return
 
         if model_name.lower().startswith('codet5'):
             model_loader=AutoModelForSeq2SeqLM
