@@ -1,0 +1,3998 @@
+[
+  {
+    "package": "com.google.gson",
+    "class": "Gson",
+    "method": "Gson",
+    "signature": "Gson()",
+    "type": "none"
+  },
+  {
+    "package": "com.google.gson",
+    "class": "Gson",
+    "method": "toJson",
+    "signature": "String toJson(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "freemarker.template",
+    "class": "Configuration",
+    "method": "Configuration",
+    "signature": "Configuration(Version p0)",
+    "type": "none"
+  },
+  {
+    "package": "freemarker.template",
+    "class": "Configuration",
+    "method": "getTemplate",
+    "signature": "Template getTemplate(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "freemarker.template",
+    "class": "Configuration",
+    "method": "setClassForTemplateLoading",
+    "signature": "void setClassForTemplateLoading(Class<> p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "freemarker.template",
+    "class": "Template",
+    "method": "process",
+    "signature": "void process(Object p0, Writer p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "ByteArrayInputStream",
+    "method": "ByteArrayInputStream",
+    "signature": "ByteArrayInputStream(byte[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "ByteArrayInputStream",
+    "method": "available",
+    "signature": "int available()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "ByteArrayInputStream",
+    "method": "read",
+    "signature": "int read()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "ByteArrayOutputStream",
+    "method": "ByteArrayOutputStream",
+    "signature": "ByteArrayOutputStream()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "ByteArrayOutputStream",
+    "method": "toByteArray",
+    "signature": "byte[] toByteArray()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "ByteArrayOutputStream",
+    "method": "write",
+    "signature": "void write(byte[] p0, int p1, int p2)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "File",
+    "signature": "File(File p0, String p1)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "File",
+    "signature": "File(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "File",
+    "signature": "File(String p0, String p1)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "canRead",
+    "signature": "boolean canRead()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "createNewFile",
+    "signature": "boolean createNewFile()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "delete",
+    "signature": "boolean delete()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "exists",
+    "signature": "boolean exists()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "getAbsolutePath",
+    "signature": "String getAbsolutePath()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "getName",
+    "signature": "String getName()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "getPath",
+    "signature": "String getPath()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "isDirectory",
+    "signature": "boolean isDirectory()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "lastModified",
+    "signature": "long lastModified()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "length",
+    "signature": "long length()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "mkdirs",
+    "signature": "boolean mkdirs()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "File",
+    "method": "toURI",
+    "signature": "URI toURI()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "FileInputStream",
+    "method": "FileInputStream",
+    "signature": "FileInputStream(File p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "java.io",
+    "class": "FileInputStream",
+    "method": "FileInputStream",
+    "signature": "FileInputStream(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "java.io",
+    "class": "FileInputStream",
+    "method": "close",
+    "signature": "void close()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "FileNotFoundException",
+    "method": "FileNotFoundException",
+    "signature": "FileNotFoundException(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.io",
+    "class": "FileWriter",
+    "method": "FileWriter",
+    "signature": "FileWriter(File p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "java.io",
+    "class": "IOException",
+    "method": "IOException",
+    "signature": "IOException(String p0, Throwable p1)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.io",
+    "class": "IOException",
+    "method": "IOException",
+    "signature": "IOException(Throwable p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "InputStream",
+    "method": "close",
+    "signature": "void close()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "InputStream",
+    "method": "read",
+    "signature": "int read()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "InputStream",
+    "method": "read",
+    "signature": "int read(byte[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "InputStreamReader",
+    "method": "InputStreamReader",
+    "signature": "InputStreamReader(InputStream p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "OutputStream",
+    "method": "close",
+    "signature": "void close()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "OutputStream",
+    "method": "flush",
+    "signature": "void flush()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "OutputStream",
+    "method": "write",
+    "signature": "void write(byte[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "OutputStream",
+    "method": "write",
+    "signature": "void write(byte[] p0, int p1, int p2)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "OutputStreamWriter",
+    "method": "close",
+    "signature": "void close()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "OutputStreamWriter",
+    "method": "flush",
+    "signature": "void flush()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "PrintWriter",
+    "method": "PrintWriter",
+    "signature": "PrintWriter(Writer p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "PrintWriter",
+    "method": "flush",
+    "signature": "void flush()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "PrintWriter",
+    "method": "println",
+    "signature": "void println()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "PrintWriter",
+    "method": "write",
+    "signature": "void write(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "java.io",
+    "class": "Reader",
+    "method": "read",
+    "signature": "int read(char[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "StringWriter",
+    "method": "StringWriter",
+    "signature": "StringWriter()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "StringWriter",
+    "method": "StringWriter",
+    "signature": "StringWriter(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "StringWriter",
+    "method": "toString",
+    "signature": "String toString()",
+    "type": "none"
+  },
+  {
+    "package": "java.io",
+    "class": "Writer",
+    "method": "write",
+    "signature": "void write(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "java.io",
+    "class": "Writer",
+    "method": "write",
+    "signature": "void write(char[] p0, int p1, int p2)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "AbstractStringBuilder",
+    "method": "charAt",
+    "signature": "char charAt(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "AbstractStringBuilder",
+    "method": "length",
+    "signature": "int length()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "AbstractStringBuilder",
+    "method": "setLength",
+    "signature": "void setLength(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Appendable",
+    "method": "append",
+    "signature": "Appendable append(CharSequence p0, int p1, int p2)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Appendable",
+    "method": "append",
+    "signature": "Appendable append(char p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Boolean",
+    "method": "valueOf",
+    "signature": "Boolean valueOf(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "CharSequence",
+    "method": "charAt",
+    "signature": "char charAt(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "CharSequence",
+    "method": "length",
+    "signature": "int length()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Character",
+    "method": "isWhitespace",
+    "signature": "boolean isWhitespace(char p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Character",
+    "method": "toChars",
+    "signature": "char[] toChars(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "cast",
+    "signature": "SparkWebSocketCreator cast(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "forName",
+    "signature": "Class<?> forName(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "getClassLoader",
+    "signature": "ClassLoader getClassLoader()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "getMethod",
+    "signature": "Method getMethod(String p0, Class<?>[] p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "getName",
+    "signature": "String getName()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "getResource",
+    "signature": "URL getResource(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "getResourceAsStream",
+    "signature": "InputStream getResourceAsStream(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "getSimpleName",
+    "signature": "String getSimpleName()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "getSuperclass",
+    "signature": "Class<?> getSuperclass()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "isAnnotationPresent",
+    "signature": "boolean isAnnotationPresent(Class<? extends Annotation> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "isAssignableFrom",
+    "signature": "boolean isAssignableFrom(Class<?> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Class",
+    "method": "newInstance",
+    "signature": "Object newInstance()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "ClassLoader",
+    "method": "getResource",
+    "signature": "URL getResource(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.lang",
+    "class": "ClassLoader",
+    "method": "getResourceAsStream",
+    "signature": "InputStream getResourceAsStream(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.lang",
+    "class": "ClassLoader",
+    "method": "getSystemClassLoader",
+    "signature": "ClassLoader getSystemClassLoader()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "ClassLoader",
+    "method": "loadClass",
+    "signature": "Class<?> loadClass(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.lang",
+    "class": "Double",
+    "method": "Double",
+    "signature": "Double(double p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Double",
+    "method": "valueOf",
+    "signature": "Double valueOf(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Enum",
+    "method": "Enum",
+    "signature": "Enum(String p0, int p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Enum",
+    "method": "equals",
+    "signature": "boolean equals(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Enum",
+    "method": "name",
+    "signature": "String name()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.lang",
+    "class": "Enum",
+    "method": "toString",
+    "signature": "String toString()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.lang",
+    "class": "Error",
+    "method": "Error",
+    "signature": "Error(Throwable p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Exception",
+    "method": "Exception",
+    "signature": "Exception()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Exception",
+    "method": "Exception",
+    "signature": "Exception(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Float",
+    "method": "Float",
+    "signature": "Float(float p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Float",
+    "method": "compare",
+    "signature": "int compare(float p0, float p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Float",
+    "method": "parseFloat",
+    "signature": "float parseFloat(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Float",
+    "method": "valueOf",
+    "signature": "Float valueOf(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "IllegalArgumentException",
+    "method": "IllegalArgumentException",
+    "signature": "IllegalArgumentException()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "IllegalArgumentException",
+    "method": "IllegalArgumentException",
+    "signature": "IllegalArgumentException(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "IllegalArgumentException",
+    "method": "IllegalArgumentException",
+    "signature": "IllegalArgumentException(Throwable p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "IllegalStateException",
+    "method": "IllegalStateException",
+    "signature": "IllegalStateException(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Integer",
+    "method": "Integer",
+    "signature": "Integer(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Integer",
+    "method": "longValue",
+    "signature": "long longValue()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Integer",
+    "method": "valueOf",
+    "signature": "Integer valueOf(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Long",
+    "method": "Long",
+    "signature": "Long(long p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Long",
+    "method": "valueOf",
+    "signature": "Long valueOf(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "NumberFormatException",
+    "method": "NumberFormatException",
+    "signature": "NumberFormatException(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "RuntimeException",
+    "method": "RuntimeException",
+    "signature": "RuntimeException()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "RuntimeException",
+    "method": "RuntimeException",
+    "signature": "RuntimeException(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "RuntimeException",
+    "method": "RuntimeException",
+    "signature": "RuntimeException(String p0, Throwable p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "RuntimeException",
+    "method": "RuntimeException",
+    "signature": "RuntimeException(Throwable p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "String",
+    "signature": "String(byte[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "String",
+    "signature": "String(byte[] p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "charAt",
+    "signature": "char charAt(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "contains",
+    "signature": "boolean contains(CharSequence p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "endsWith",
+    "signature": "boolean endsWith(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "equals",
+    "signature": "boolean equals(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "equalsIgnoreCase",
+    "signature": "boolean equalsIgnoreCase(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "format",
+    "signature": "String format(String p0, Object[] p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "getBytes",
+    "signature": "byte[] getBytes()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "getBytes",
+    "signature": "byte[] getBytes(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "hashCode",
+    "signature": "int hashCode()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "indexOf",
+    "signature": "int indexOf(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "indexOf",
+    "signature": "int indexOf(String p0, int p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "indexOf",
+    "signature": "int indexOf(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "isEmpty",
+    "signature": "boolean isEmpty()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "lastIndexOf",
+    "signature": "int lastIndexOf(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "lastIndexOf",
+    "signature": "int lastIndexOf(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "lastIndexOf",
+    "signature": "int lastIndexOf(int p0, int p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "length",
+    "signature": "int length()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "replace",
+    "signature": "String replace(CharSequence p0, CharSequence p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "replace",
+    "signature": "String replace(char p0, char p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "replaceAll",
+    "signature": "String replaceAll(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "split",
+    "signature": "String[] split(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "startsWith",
+    "signature": "boolean startsWith(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "substring",
+    "signature": "String substring(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "substring",
+    "signature": "String substring(int p0, int p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "toCharArray",
+    "signature": "char[] toCharArray()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "toLowerCase",
+    "signature": "String toLowerCase()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "trim",
+    "signature": "String trim()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "String",
+    "method": "valueOf",
+    "signature": "String valueOf(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuffer",
+    "method": "StringBuffer",
+    "signature": "StringBuffer(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuffer",
+    "method": "append",
+    "signature": "StringBuffer append(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuffer",
+    "method": "toString",
+    "signature": "String toString()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "StringBuilder",
+    "signature": "StringBuilder()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "StringBuilder",
+    "signature": "StringBuilder(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "StringBuilder",
+    "signature": "StringBuilder(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "append",
+    "signature": "StringBuilder append(CharSequence p0, int p1, int p2)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "append",
+    "signature": "StringBuilder append(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "append",
+    "signature": "StringBuilder append(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "append",
+    "signature": "StringBuilder append(char p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "append",
+    "signature": "StringBuilder append(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "delete",
+    "signature": "StringBuilder delete(int p0, int p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "deleteCharAt",
+    "signature": "StringBuilder deleteCharAt(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "insert",
+    "signature": "StringBuilder insert(int p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "insert",
+    "signature": "StringBuilder insert(int p0, char p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "StringBuilder",
+    "method": "toString",
+    "signature": "String toString()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "System",
+    "method": "currentTimeMillis",
+    "signature": "long currentTimeMillis()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "System",
+    "method": "getProperty",
+    "signature": "String getProperty(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.lang",
+    "class": "Thread",
+    "method": "Thread",
+    "signature": "Thread(Runnable p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Thread",
+    "method": "currentThread",
+    "signature": "Thread currentThread()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Thread",
+    "method": "getContextClassLoader",
+    "signature": "ClassLoader getContextClassLoader()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Thread",
+    "method": "interrupt",
+    "signature": "void interrupt()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Thread",
+    "method": "setContextClassLoader",
+    "signature": "void setContextClassLoader(ClassLoader p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Thread",
+    "method": "start",
+    "signature": "void start()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Throwable",
+    "method": "getMessage",
+    "signature": "String getMessage()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.lang",
+    "class": "Throwable",
+    "method": "printStackTrace",
+    "signature": "void printStackTrace()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "Throwable",
+    "method": "toString",
+    "signature": "String toString()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang",
+    "class": "UnsupportedOperationException",
+    "method": "UnsupportedOperationException",
+    "signature": "UnsupportedOperationException()",
+    "type": "none"
+  },
+  {
+    "package": "java.lang.reflect",
+    "class": "Array",
+    "method": "newInstance",
+    "signature": "Object newInstance(Class<?> p0, int p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.lang.reflect",
+    "class": "Method",
+    "method": "invoke",
+    "signature": "Object invoke(Object p0, Object[] p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "HttpURLConnection",
+    "method": "disconnect",
+    "signature": "void disconnect()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "HttpURLConnection",
+    "method": "getResponseCode",
+    "signature": "int getResponseCode()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "HttpURLConnection",
+    "method": "setRequestMethod",
+    "signature": "void setRequestMethod(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "MalformedURLException",
+    "method": "MalformedURLException",
+    "signature": "MalformedURLException(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "ServerSocket",
+    "method": "ServerSocket",
+    "signature": "ServerSocket(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "ServerSocket",
+    "method": "getLocalPort",
+    "signature": "int getLocalPort()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URI",
+    "method": "URI",
+    "signature": "URI(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.net",
+    "class": "URI",
+    "method": "create",
+    "signature": "URI create(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.net",
+    "class": "URI",
+    "method": "getScheme",
+    "signature": "String getScheme()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URI",
+    "method": "getSchemeSpecificPart",
+    "signature": "String getSchemeSpecificPart()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.net",
+    "class": "URI",
+    "method": "toURL",
+    "signature": "URL toURL()",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.net",
+    "class": "URL",
+    "method": "URL",
+    "signature": "URL(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.net",
+    "class": "URL",
+    "method": "getFile",
+    "signature": "String getFile()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.net",
+    "class": "URL",
+    "method": "getProtocol",
+    "signature": "String getProtocol()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URL",
+    "method": "openConnection",
+    "signature": "URLConnection openConnection()",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.net",
+    "class": "URL",
+    "method": "toString",
+    "signature": "String toString()",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.net",
+    "class": "URLClassLoader",
+    "method": "URLClassLoader",
+    "signature": "URLClassLoader(URL[] p0, ClassLoader p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLClassLoader",
+    "method": "getURLs",
+    "signature": "URL[] getURLs()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLConnection",
+    "method": "addRequestProperty",
+    "signature": "void addRequestProperty(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLConnection",
+    "method": "connect",
+    "signature": "void connect()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLConnection",
+    "method": "getContentLength",
+    "signature": "int getContentLength()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLConnection",
+    "method": "getHeaderFields",
+    "signature": "Map<String,List<String>> getHeaderFields()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLConnection",
+    "method": "getInputStream",
+    "signature": "InputStream getInputStream()",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.net",
+    "class": "URLConnection",
+    "method": "getLastModified",
+    "signature": "long getLastModified()",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLConnection",
+    "method": "setUseCaches",
+    "signature": "void setUseCaches(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLDecoder",
+    "method": "decode",
+    "signature": "String decode(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.net",
+    "class": "URLEncoder",
+    "method": "encode",
+    "signature": "String encode(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.nio",
+    "class": "ByteBuffer",
+    "method": "array",
+    "signature": "byte[] array()",
+    "type": "none"
+  },
+  {
+    "package": "java.nio",
+    "class": "ByteBuffer",
+    "method": "wrap",
+    "signature": "ByteBuffer wrap(byte[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.nio.charset",
+    "class": "Charset",
+    "method": "isSupported",
+    "signature": "boolean isSupported(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.nio.file",
+    "class": "Path",
+    "method": "toAbsolutePath",
+    "signature": "Path toAbsolutePath()",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.nio.file",
+    "class": "Path",
+    "method": "toString",
+    "signature": "String toString()",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.nio.file",
+    "class": "Paths",
+    "method": "get",
+    "signature": "Path get(String p0, String[] p1)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.security",
+    "class": "KeyStore",
+    "method": "getDefaultType",
+    "signature": "String getDefaultType()",
+    "type": "none"
+  },
+  {
+    "package": "java.security",
+    "class": "KeyStore",
+    "method": "getInstance",
+    "signature": "KeyStore getInstance(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.security",
+    "class": "KeyStore",
+    "method": "load",
+    "signature": "void load(InputStream p0, char[] p1)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayDeque",
+    "method": "ArrayDeque<String>",
+    "signature": "ArrayDeque<String>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<AbstractResourceHandler>",
+    "signature": "ArrayList<AbstractResourceHandler>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<Cookie>",
+    "signature": "ArrayList<Cookie>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<E>",
+    "signature": "ArrayList<E>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<Handler>",
+    "signature": "ArrayList<Handler>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<Integer>",
+    "signature": "ArrayList<Integer>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<Object>",
+    "signature": "ArrayList<Object>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<RouteEntry>",
+    "signature": "ArrayList<RouteEntry>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<RouteMatch>",
+    "signature": "ArrayList<RouteMatch>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "ArrayList",
+    "method": "ArrayList<String>",
+    "signature": "ArrayList<String>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Arrays",
+    "method": "asList",
+    "signature": "List<T> asList(T[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "add",
+    "signature": "boolean add(Cookie p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "add",
+    "signature": "boolean add(Integer p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "contains",
+    "signature": "boolean contains(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "isEmpty",
+    "signature": "boolean isEmpty()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "iterator",
+    "signature": "Iterator<?> iterator()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "size",
+    "signature": "int size()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "stream",
+    "signature": "Stream<String> stream()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collection",
+    "method": "toArray",
+    "signature": "T[] toArray(T[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collections",
+    "method": "enumeration",
+    "signature": "Enumeration<T> enumeration(Collection<T> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collections",
+    "method": "list",
+    "signature": "ArrayList<T> list(Enumeration<T> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collections",
+    "method": "sort",
+    "signature": "void sort(List<T> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collections",
+    "method": "synchronizedList",
+    "signature": "List<T> synchronizedList(List<T> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collections",
+    "method": "unmodifiableList",
+    "signature": "List<T> unmodifiableList(List<? extends T> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Collections",
+    "method": "unmodifiableMap",
+    "signature": "Map<K,V> unmodifiableMap(Map<? extends K,? extends V> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Date",
+    "method": "Date",
+    "signature": "Date(long p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Date",
+    "method": "toString",
+    "signature": "String toString()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Deque",
+    "method": "addLast",
+    "signature": "void addLast(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Deque",
+    "method": "removeLast",
+    "signature": "String removeLast()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Entry",
+    "method": "getKey",
+    "signature": "Class<?> getKey()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Entry",
+    "method": "getKey",
+    "signature": "String getKey()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Entry",
+    "method": "getValue",
+    "signature": "Class<?> getValue()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Entry",
+    "method": "getValue",
+    "signature": "QueryParamsMap getValue()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Entry",
+    "method": "getValue",
+    "signature": "String getValue()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Entry",
+    "method": "getValue",
+    "signature": "String[] getValue()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Enumeration",
+    "method": "hasMoreElements",
+    "signature": "boolean hasMoreElements()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Enumeration",
+    "method": "nextElement",
+    "signature": "String nextElement()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap",
+    "signature": "HashMap()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<>",
+    "signature": "HashMap<>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<Class<? extends Exception>,ExceptionHandlerImpl<>>",
+    "signature": "HashMap<Class<? extends Exception>,ExceptionHandlerImpl<>>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<Class<?>,Class<?>>",
+    "signature": "HashMap<Class<?>,Class<?>>(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<Class<?>,Method>",
+    "signature": "HashMap<Class<?>,Method>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<Class<?>,String>",
+    "signature": "HashMap<Class<?>,String>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<Integer,Object>",
+    "signature": "HashMap<Integer,Object>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<Integer,String>",
+    "signature": "HashMap<Integer,String>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<Object,EmbeddedServerFactory>",
+    "signature": "HashMap<Object,EmbeddedServerFactory>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,Book>",
+    "signature": "HashMap<String,Book>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,Class<?>>",
+    "signature": "HashMap<String,Class<?>>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,Class<?>>",
+    "signature": "HashMap<String,Class<?>>(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,HttpMethod>",
+    "signature": "HashMap<String,HttpMethod>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,Object>",
+    "signature": "HashMap<String,Object>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,QueryParamsMap>",
+    "signature": "HashMap<String,QueryParamsMap>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,RouteEntry>",
+    "signature": "HashMap<String,RouteEntry>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,String>",
+    "signature": "HashMap<String,String>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,String[]>",
+    "signature": "HashMap<String,String[]>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "HashMap<String,WebSocketHandlerWrapper>",
+    "signature": "HashMap<String,WebSocketHandlerWrapper>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "containsKey",
+    "signature": "boolean containsKey(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "get",
+    "signature": "HttpMethod get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "get",
+    "signature": "Object get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "get",
+    "signature": "String get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "put",
+    "signature": "Class<?> put(String p0, Class<?> p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "put",
+    "signature": "HttpMethod put(String p0, HttpMethod p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "put",
+    "signature": "Method put(Class<?> p0, Method p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "put",
+    "signature": "Object put(Integer p0, Object p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "put",
+    "signature": "Object put(Object p0, Object p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "put",
+    "signature": "String put(Class<?> p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashMap",
+    "method": "put",
+    "signature": "String put(Integer p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashSet",
+    "method": "HashSet<Class<?>>",
+    "signature": "HashSet<Class<?>>(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashSet",
+    "method": "HashSet<String>",
+    "signature": "HashSet<String>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "HashSet",
+    "method": "HashSet<String>",
+    "signature": "HashSet<String>(Collection<? extends String> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Iterator",
+    "method": "hasNext",
+    "signature": "boolean hasNext()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Iterator",
+    "method": "next",
+    "signature": "Object next()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "clear",
+    "signature": "void clear()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "containsKey",
+    "signature": "boolean containsKey(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "entrySet",
+    "signature": "Set<Entry<Class<?>,Class<?>>> entrySet()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "entrySet",
+    "signature": "Set<Entry<String,QueryParamsMap>> entrySet()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "entrySet",
+    "signature": "Set<Entry<String,String>> entrySet()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "entrySet",
+    "signature": "Set<Entry<String,String[]>> entrySet()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "forEach",
+    "signature": "void forEach(BiConsumer<? super String,? super String> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "Book get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "Class<?> get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "ConnectionFactory get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "EmbeddedServerFactory get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "ExceptionHandlerImpl<> get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "List<String> get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "QueryParamsMap get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "RouteEntry get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "String get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "String[] get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "get",
+    "signature": "WebSocketHandlerWrapper get(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "getOrDefault",
+    "signature": "String getOrDefault(Object p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "isEmpty",
+    "signature": "boolean isEmpty()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "keySet",
+    "signature": "Set<String> keySet()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "Book put(String p0, Book p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "Class<?> put(Class<?> p0, Class<?> p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "Class<?> put(String p0, Class<?> p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "EmbeddedServerFactory put(Object p0, EmbeddedServerFactory p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "ExceptionHandlerImpl<> put(Class<? extends Exception> p0, ExceptionHandlerImpl<> p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "Object put(String p0, Object p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "QueryParamsMap put(String p0, QueryParamsMap p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "RouteEntry put(String p0, RouteEntry p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "String put(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "String[] put(String p0, String[] p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "put",
+    "signature": "WebSocketHandlerWrapper put(String p0, WebSocketHandlerWrapper p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "putAll",
+    "signature": "void putAll(Map<? extends String,? extends String> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "remove",
+    "signature": "Book remove(Object p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "size",
+    "signature": "int size()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Map",
+    "method": "values",
+    "signature": "Collection<Class<?>> values()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Objects",
+    "method": "requireNonNull",
+    "signature": "T requireNonNull(T p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Optional",
+    "method": "empty",
+    "signature": "Optional<T> empty()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Optional",
+    "method": "get",
+    "signature": "Integer get()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Optional",
+    "method": "isPresent",
+    "signature": "boolean isPresent()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Optional",
+    "method": "of",
+    "signature": "Optional<T> of(T p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Optional",
+    "method": "ofNullable",
+    "signature": "Optional<T> ofNullable(T p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Optional",
+    "method": "orElse",
+    "signature": "String orElse(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Random",
+    "method": "Random",
+    "signature": "Random()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Random",
+    "method": "nextInt",
+    "signature": "int nextInt(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Set",
+    "method": "add",
+    "signature": "boolean add(Class<?> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Set",
+    "method": "add",
+    "signature": "boolean add(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Set",
+    "method": "addAll",
+    "signature": "boolean addAll(Collection<? extends Class<?>> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "Set",
+    "method": "toArray",
+    "signature": "Object[] toArray()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "TreeSet",
+    "method": "TreeSet<String>",
+    "signature": "TreeSet<String>()",
+    "type": "none"
+  },
+  {
+    "package": "java.util",
+    "class": "TreeSet",
+    "method": "add",
+    "signature": "boolean add(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent",
+    "class": "CountDownLatch",
+    "method": "CountDownLatch",
+    "signature": "CountDownLatch(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent",
+    "class": "CountDownLatch",
+    "method": "await",
+    "signature": "boolean await(long p0, TimeUnit p1)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent",
+    "class": "CountDownLatch",
+    "method": "await",
+    "signature": "void await()",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent",
+    "class": "CountDownLatch",
+    "method": "countDown",
+    "signature": "void countDown()",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent",
+    "class": "TimeUnit",
+    "method": "toMillis",
+    "signature": "long toMillis(long p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent.atomic",
+    "class": "AtomicBoolean",
+    "method": "AtomicBoolean",
+    "signature": "AtomicBoolean(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent.atomic",
+    "class": "AtomicBoolean",
+    "method": "get",
+    "signature": "boolean get()",
+    "type": "none"
+  },
+  {
+    "package": "java.util.concurrent.atomic",
+    "class": "AtomicBoolean",
+    "method": "set",
+    "signature": "void set(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.function",
+    "class": "Consumer",
+    "method": "accept",
+    "signature": "void accept(Exception p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.regex",
+    "class": "Matcher",
+    "method": "end",
+    "signature": "int end()",
+    "type": "none"
+  },
+  {
+    "package": "java.util.regex",
+    "class": "Matcher",
+    "method": "find",
+    "signature": "boolean find()",
+    "type": "none"
+  },
+  {
+    "package": "java.util.regex",
+    "class": "Matcher",
+    "method": "group",
+    "signature": "String group()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "java.util.regex",
+    "class": "Pattern",
+    "method": "compile",
+    "signature": "Pattern compile(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.util.regex",
+    "class": "Pattern",
+    "method": "matcher",
+    "signature": "Matcher matcher(CharSequence p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.stream",
+    "class": "Collectors",
+    "method": "joining",
+    "signature": "Collector<CharSequence,?,String> joining(CharSequence p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "java.util.stream",
+    "class": "Stream",
+    "method": "anyMatch",
+    "signature": "boolean anyMatch(Predicate<? super String> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.stream",
+    "class": "Stream",
+    "method": "collect",
+    "signature": "R collect(Collector<? super String,A,R> p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.zip",
+    "class": "GZIPInputStream",
+    "method": "GZIPInputStream",
+    "signature": "GZIPInputStream(InputStream p0)",
+    "type": "none"
+  },
+  {
+    "package": "java.util.zip",
+    "class": "GZIPOutputStream",
+    "method": "GZIPOutputStream",
+    "signature": "GZIPOutputStream(OutputStream p0, boolean p1)",
+    "type": "none"
+  },
+  {
+    "package": "javax.net.ssl",
+    "class": "SSLContext",
+    "method": "getInstance",
+    "signature": "SSLContext getInstance(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.net.ssl",
+    "class": "SSLContext",
+    "method": "getSocketFactory",
+    "signature": "SSLSocketFactory getSocketFactory()",
+    "type": "none"
+  },
+  {
+    "package": "javax.net.ssl",
+    "class": "SSLContext",
+    "method": "init",
+    "signature": "void init(KeyManager[] p0, TrustManager[] p1, SecureRandom p2)",
+    "type": "none"
+  },
+  {
+    "package": "javax.net.ssl",
+    "class": "TrustManagerFactory",
+    "method": "getDefaultAlgorithm",
+    "signature": "String getDefaultAlgorithm()",
+    "type": "none"
+  },
+  {
+    "package": "javax.net.ssl",
+    "class": "TrustManagerFactory",
+    "method": "getInstance",
+    "signature": "TrustManagerFactory getInstance(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.net.ssl",
+    "class": "TrustManagerFactory",
+    "method": "getTrustManagers",
+    "signature": "TrustManager[] getTrustManagers()",
+    "type": "none"
+  },
+  {
+    "package": "javax.net.ssl",
+    "class": "TrustManagerFactory",
+    "method": "init",
+    "signature": "void init(KeyStore p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "Filter",
+    "method": "doFilter",
+    "signature": "void doFilter(ServletRequest p0, ServletResponse p1, FilterChain p2)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "FilterChain",
+    "method": "doFilter",
+    "signature": "void doFilter(ServletRequest p0, ServletResponse p1)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "FilterConfig",
+    "method": "getFilterName",
+    "signature": "String getFilterName()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "FilterConfig",
+    "method": "getInitParameter",
+    "signature": "String getInitParameter(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "FilterConfig",
+    "method": "getInitParameterNames",
+    "signature": "Enumeration<String> getInitParameterNames()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "FilterConfig",
+    "method": "getServletContext",
+    "signature": "ServletContext getServletContext()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletContext",
+    "method": "getAttribute",
+    "signature": "Object getAttribute(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletException",
+    "method": "ServletException",
+    "signature": "ServletException(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletException",
+    "method": "ServletException",
+    "signature": "ServletException(Throwable p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletInputStream",
+    "method": "ServletInputStream",
+    "signature": "ServletInputStream()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getAttribute",
+    "signature": "Object getAttribute(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getAttributeNames",
+    "signature": "Enumeration<String> getAttributeNames()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getCharacterEncoding",
+    "signature": "String getCharacterEncoding()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getContentLength",
+    "signature": "int getContentLength()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getContentType",
+    "signature": "String getContentType()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getInputStream",
+    "signature": "ServletInputStream getInputStream()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getParameter",
+    "signature": "String getParameter(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getParameterMap",
+    "signature": "Map<String,String[]> getParameterMap()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getParameterValues",
+    "signature": "String[] getParameterValues(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getProtocol",
+    "signature": "String getProtocol()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getRemoteAddr",
+    "signature": "String getRemoteAddr()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getScheme",
+    "signature": "String getScheme()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "getServerPort",
+    "signature": "int getServerPort()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequest",
+    "method": "setAttribute",
+    "signature": "void setAttribute(String p0, Object p1)",
+    "sink_args": [
+      "p0",
+      "p1"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequestWrapper",
+    "method": "getInputStream",
+    "signature": "ServletInputStream getInputStream()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletRequestWrapper",
+    "method": "getRequest",
+    "signature": "ServletRequest getRequest()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletResponse",
+    "method": "getContentType",
+    "signature": "String getContentType()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletResponse",
+    "method": "getOutputStream",
+    "signature": "ServletOutputStream getOutputStream()",
+    "sink_args": [
+      "this"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletResponse",
+    "method": "getWriter",
+    "signature": "PrintWriter getWriter()",
+    "sink_args": [
+      "this"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletResponse",
+    "method": "isCommitted",
+    "signature": "boolean isCommitted()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet",
+    "class": "ServletResponse",
+    "method": "setContentType",
+    "signature": "void setContentType(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "Cookie",
+    "signature": "Cookie(String p0, String p1)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "getDomain",
+    "signature": "String getDomain()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "getMaxAge",
+    "signature": "int getMaxAge()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "getName",
+    "signature": "String getName()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "getPath",
+    "signature": "String getPath()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "getSecure",
+    "signature": "boolean getSecure()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "getValue",
+    "signature": "String getValue()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "isHttpOnly",
+    "signature": "boolean isHttpOnly()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "setDomain",
+    "signature": "void setDomain(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "setHttpOnly",
+    "signature": "void setHttpOnly(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "setMaxAge",
+    "signature": "void setMaxAge(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "setPath",
+    "signature": "void setPath(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "Cookie",
+    "method": "setSecure",
+    "signature": "void setSecure(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getContextPath",
+    "signature": "String getContextPath()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getCookies",
+    "signature": "Cookie[] getCookies()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getHeader",
+    "signature": "String getHeader(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getHeaderNames",
+    "signature": "Enumeration<String> getHeaderNames()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getHeaders",
+    "signature": "Enumeration<String> getHeaders(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getMethod",
+    "signature": "String getMethod()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getPathInfo",
+    "signature": "String getPathInfo()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getQueryString",
+    "signature": "String getQueryString()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getRequestURI",
+    "signature": "String getRequestURI()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getRequestURL",
+    "signature": "StringBuffer getRequestURL()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getServletPath",
+    "signature": "String getServletPath()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getSession",
+    "signature": "HttpSession getSession()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequest",
+    "method": "getSession",
+    "signature": "HttpSession getSession(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletRequestWrapper",
+    "method": "HttpServletRequestWrapper",
+    "signature": "HttpServletRequestWrapper(HttpServletRequest p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "addCookie",
+    "signature": "void addCookie(Cookie p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "addHeader",
+    "signature": "void addHeader(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "getHeaders",
+    "signature": "Collection<String> getHeaders(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "getStatus",
+    "signature": "int getStatus()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "sendError",
+    "signature": "void sendError(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "sendRedirect",
+    "signature": "void sendRedirect(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "setHeader",
+    "signature": "void setHeader(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpServletResponse",
+    "method": "setStatus",
+    "signature": "void setStatus(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "getAttribute",
+    "signature": "Object getAttribute(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "getAttributeNames",
+    "signature": "Enumeration<String> getAttributeNames()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "getCreationTime",
+    "signature": "long getCreationTime()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "getId",
+    "signature": "String getId()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "getLastAccessedTime",
+    "signature": "long getLastAccessedTime()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "getMaxInactiveInterval",
+    "signature": "int getMaxInactiveInterval()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "invalidate",
+    "signature": "void invalidate()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "isNew",
+    "signature": "boolean isNew()",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "removeAttribute",
+    "signature": "void removeAttribute(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "setAttribute",
+    "signature": "void setAttribute(String p0, Object p1)",
+    "type": "none"
+  },
+  {
+    "package": "javax.servlet.http",
+    "class": "HttpSession",
+    "method": "setMaxInactiveInterval",
+    "signature": "void setMaxInactiveInterval(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http",
+    "class": "Header",
+    "method": "getName",
+    "signature": "String getName()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "org.apache.http",
+    "class": "Header",
+    "method": "getValue",
+    "signature": "String getValue()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "org.apache.http",
+    "class": "HttpMessage",
+    "method": "addHeader",
+    "signature": "void addHeader(String p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http",
+    "class": "HttpMessage",
+    "method": "getAllHeaders",
+    "signature": "Header[] getAllHeaders()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http",
+    "class": "HttpResponse",
+    "method": "getEntity",
+    "signature": "HttpEntity getEntity()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http",
+    "class": "HttpResponse",
+    "method": "getStatusLine",
+    "signature": "StatusLine getStatusLine()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http",
+    "class": "StatusLine",
+    "method": "getStatusCode",
+    "signature": "int getStatusCode()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.client",
+    "class": "HttpClient",
+    "method": "execute",
+    "signature": "HttpResponse execute(HttpUriRequest p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpDelete",
+    "method": "HttpDelete",
+    "signature": "HttpDelete(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpEntityEnclosingRequestBase",
+    "method": "setEntity",
+    "signature": "void setEntity(HttpEntity p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpGet",
+    "method": "HttpGet",
+    "signature": "HttpGet(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpHead",
+    "method": "HttpHead",
+    "signature": "HttpHead(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpOptions",
+    "method": "HttpOptions",
+    "signature": "HttpOptions(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpPatch",
+    "method": "HttpPatch",
+    "signature": "HttpPatch(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpPost",
+    "method": "HttpPost",
+    "signature": "HttpPost(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpPut",
+    "method": "HttpPut",
+    "signature": "HttpPut(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpRequestBase",
+    "method": "HttpRequestBase",
+    "signature": "HttpRequestBase()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpRequestBase",
+    "method": "releaseConnection",
+    "signature": "void releaseConnection()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpRequestBase",
+    "method": "setURI",
+    "signature": "void setURI(URI p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.client.methods",
+    "class": "HttpTrace",
+    "method": "HttpTrace",
+    "signature": "HttpTrace(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.config",
+    "class": "RegistryBuilder",
+    "method": "build",
+    "signature": "Registry<ConnectionSocketFactory> build()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.config",
+    "class": "RegistryBuilder",
+    "method": "create",
+    "signature": "RegistryBuilder<I> create()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.config",
+    "class": "RegistryBuilder",
+    "method": "register",
+    "signature": "RegistryBuilder<ConnectionSocketFactory> register(String p0, ConnectionSocketFactory p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.conn.ssl",
+    "class": "SSLConnectionSocketFactory",
+    "method": "SSLConnectionSocketFactory",
+    "signature": "SSLConnectionSocketFactory(SSLSocketFactory p0, HostnameVerifier p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.entity",
+    "class": "StringEntity",
+    "method": "StringEntity",
+    "signature": "StringEntity(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.apache.http.impl.client",
+    "class": "DefaultRedirectStrategy",
+    "method": "DefaultRedirectStrategy",
+    "signature": "DefaultRedirectStrategy()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.impl.client",
+    "class": "DefaultRedirectStrategy",
+    "method": "isRedirected",
+    "signature": "boolean isRedirected(HttpRequest p0, HttpResponse p1, HttpContext p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.impl.client",
+    "class": "HttpClientBuilder",
+    "method": "build",
+    "signature": "CloseableHttpClient build()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.impl.client",
+    "class": "HttpClientBuilder",
+    "method": "create",
+    "signature": "HttpClientBuilder create()",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.impl.client",
+    "class": "HttpClientBuilder",
+    "method": "setConnectionManager",
+    "signature": "HttpClientBuilder setConnectionManager(HttpClientConnectionManager p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.impl.client",
+    "class": "HttpClientBuilder",
+    "method": "setRedirectStrategy",
+    "signature": "HttpClientBuilder setRedirectStrategy(RedirectStrategy p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.impl.conn",
+    "class": "BasicHttpClientConnectionManager",
+    "method": "BasicHttpClientConnectionManager",
+    "signature": "BasicHttpClientConnectionManager(Lookup<ConnectionSocketFactory> p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.apache.http.message",
+    "class": "AbstractHttpMessage",
+    "method": "setHeader",
+    "signature": "void setHeader(String p0, String p1)",
+    "sink_args": [
+      "p0",
+      "p1"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "org.apache.http.util",
+    "class": "EntityUtils",
+    "method": "toString",
+    "signature": "String toString(HttpEntity p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "org.eclipse.jetty.http.pathmap",
+    "class": "MappedResource",
+    "method": "getPathSpec",
+    "signature": "PathSpec getPathSpec()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.http.pathmap",
+    "class": "PathSpec",
+    "method": "getDeclaration",
+    "signature": "String getDeclaration()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.http.pathmap",
+    "class": "ServletPathSpec",
+    "method": "ServletPathSpec",
+    "signature": "ServletPathSpec(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "AbstractConnector",
+    "method": "getServer",
+    "signature": "Server getServer()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "AbstractConnector",
+    "method": "setIdleTimeout",
+    "signature": "void setIdleTimeout(long p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "AbstractNetworkConnector",
+    "method": "setHost",
+    "signature": "void setHost(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "AbstractNetworkConnector",
+    "method": "setPort",
+    "signature": "void setPort(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "ForwardedRequestCustomizer",
+    "method": "ForwardedRequestCustomizer",
+    "signature": "ForwardedRequestCustomizer()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "HttpConfiguration",
+    "method": "HttpConfiguration",
+    "signature": "HttpConfiguration()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "HttpConfiguration",
+    "method": "addCustomizer",
+    "signature": "void addCustomizer(Customizer p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "HttpConfiguration",
+    "method": "setSecureScheme",
+    "signature": "void setSecureScheme(String p0)",
+    "sink_args": [
+      "p0"
+    ],
+    "type": "sink"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "HttpConnectionFactory",
+    "method": "HttpConnectionFactory",
+    "signature": "HttpConnectionFactory(HttpConfiguration p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "NCSARequestLog",
+    "method": "NCSARequestLog",
+    "signature": "NCSARequestLog(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Request",
+    "method": "setHandled",
+    "signature": "void setHandled(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Server",
+    "method": "Server",
+    "signature": "Server()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Server",
+    "method": "Server",
+    "signature": "Server(ThreadPool p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Server",
+    "method": "getConnectors",
+    "signature": "Connector[] getConnectors()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Server",
+    "method": "getThreadPool",
+    "signature": "ThreadPool getThreadPool()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Server",
+    "method": "join",
+    "signature": "void join()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Server",
+    "method": "setConnectors",
+    "signature": "void setConnectors(Connector[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "Server",
+    "method": "setRequestLog",
+    "signature": "void setRequestLog(RequestLog p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "ServerConnector",
+    "method": "ServerConnector",
+    "signature": "ServerConnector(Server p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "ServerConnector",
+    "method": "ServerConnector",
+    "signature": "ServerConnector(Server p0, ConnectionFactory[] p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "ServerConnector",
+    "method": "ServerConnector",
+    "signature": "ServerConnector(Server p0, SslContextFactory p1, ConnectionFactory[] p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "ServerConnector",
+    "method": "setSoLingerTime",
+    "signature": "void setSoLingerTime(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server",
+    "class": "SslConnectionFactory",
+    "method": "getSslContextFactory",
+    "signature": "SslContextFactory getSslContextFactory()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server.handler",
+    "class": "Context",
+    "method": "getAttribute",
+    "signature": "Object getAttribute(String p0)",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "org.eclipse.jetty.server.handler",
+    "class": "ContextHandler",
+    "method": "getServletContext",
+    "signature": "Context getServletContext()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server.handler",
+    "class": "ContextHandler",
+    "method": "setContextPath",
+    "signature": "void setContextPath(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.eclipse.jetty.server.handler",
+    "class": "HandlerCollection",
+    "method": "setHandlers",
+    "signature": "void setHandlers(Handler[] p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server.handler",
+    "class": "HandlerList",
+    "method": "HandlerList",
+    "signature": "HandlerList()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server.handler",
+    "class": "HandlerWrapper",
+    "method": "setHandler",
+    "signature": "void setHandler(Handler p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.server.session",
+    "class": "SessionHandler",
+    "method": "SessionHandler",
+    "signature": "SessionHandler()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.servlet",
+    "class": "ServletContextHandler",
+    "method": "ServletContextHandler",
+    "signature": "ServletContextHandler(HandlerContainer p0, String p1, boolean p2, boolean p3)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util",
+    "class": "NotUtf8Exception",
+    "method": "NotUtf8Exception",
+    "signature": "NotUtf8Exception(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util",
+    "class": "URIUtil",
+    "method": "encodePath",
+    "signature": "String encodePath(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.eclipse.jetty.util.component",
+    "class": "AbstractLifeCycle",
+    "method": "start",
+    "signature": "void start()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.component",
+    "class": "AbstractLifeCycle",
+    "method": "stop",
+    "signature": "void stop()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.resource",
+    "class": "Resource",
+    "method": "getFile",
+    "signature": "File getFile()",
+    "sink_args": [],
+    "type": "source"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "SslContextFactory",
+    "signature": "SslContextFactory(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "getKeyStoreResource",
+    "signature": "Resource getKeyStoreResource()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "getTrustStoreResource",
+    "signature": "Resource getTrustStoreResource()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "setKeyStorePassword",
+    "signature": "void setKeyStorePassword(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "setNeedClientAuth",
+    "signature": "void setNeedClientAuth(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "setTrustStorePassword",
+    "signature": "void setTrustStorePassword(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "setTrustStorePath",
+    "signature": "void setTrustStorePath(String p0)",
+    "sink_args": [],
+    "type": "taint-propagator"
+  },
+  {
+    "package": "org.eclipse.jetty.util.ssl",
+    "class": "SslContextFactory",
+    "method": "setWantClientAuth",
+    "signature": "void setWantClientAuth(boolean p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.thread",
+    "class": "QueuedThreadPool",
+    "method": "QueuedThreadPool",
+    "signature": "QueuedThreadPool(int p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.thread",
+    "class": "QueuedThreadPool",
+    "method": "QueuedThreadPool",
+    "signature": "QueuedThreadPool(int p0, int p1, int p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.thread",
+    "class": "ThreadPool",
+    "method": "getIdleThreads",
+    "signature": "int getIdleThreads()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.util.thread",
+    "class": "ThreadPool",
+    "method": "getThreads",
+    "signature": "int getThreads()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.webapp",
+    "class": "WebAppContext",
+    "method": "WebAppContext",
+    "signature": "WebAppContext()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.webapp",
+    "class": "WebAppContext",
+    "method": "setServer",
+    "signature": "void setServer(Server p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.webapp",
+    "class": "WebAppContext",
+    "method": "setWar",
+    "signature": "void setWar(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.api",
+    "class": "RemoteEndpoint",
+    "method": "sendString",
+    "signature": "void sendString(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.api",
+    "class": "Session",
+    "method": "close",
+    "signature": "void close(int p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.api",
+    "class": "Session",
+    "method": "getRemote",
+    "signature": "RemoteEndpoint getRemote()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.api",
+    "class": "WebSocketAdapter",
+    "method": "WebSocketAdapter",
+    "signature": "WebSocketAdapter()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.api",
+    "class": "WebSocketPolicy",
+    "method": "getIdleTimeout",
+    "signature": "long getIdleTimeout()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.api",
+    "class": "WebSocketPolicy",
+    "method": "setIdleTimeout",
+    "signature": "void setIdleTimeout(long p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.client",
+    "class": "ClientUpgradeRequest",
+    "method": "ClientUpgradeRequest",
+    "signature": "ClientUpgradeRequest()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.client",
+    "class": "WebSocketClient",
+    "method": "WebSocketClient",
+    "signature": "WebSocketClient()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.client",
+    "class": "WebSocketClient",
+    "method": "connect",
+    "signature": "Future<Session> connect(Object p0, URI p1, ClientUpgradeRequest p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.server",
+    "class": "NativeWebSocketConfiguration",
+    "method": "addMapping",
+    "signature": "void addMapping(PathSpec p0, WebSocketCreator p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.server",
+    "class": "NativeWebSocketConfiguration",
+    "method": "getFactory",
+    "signature": "WebSocketServerFactory getFactory()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.server",
+    "class": "NativeWebSocketConfiguration",
+    "method": "getMatch",
+    "signature": "MappedResource<WebSocketCreator> getMatch(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.server",
+    "class": "WebSocketServerFactory",
+    "method": "getPolicy",
+    "signature": "WebSocketPolicy getPolicy()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.server",
+    "class": "WebSocketUpgradeFilter",
+    "method": "configureContext",
+    "signature": "WebSocketUpgradeFilter configureContext(ServletContextHandler p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.server",
+    "class": "WebSocketUpgradeFilter",
+    "method": "getFactory",
+    "signature": "WebSocketServletFactory getFactory()",
+    "type": "none"
+  },
+  {
+    "package": "org.eclipse.jetty.websocket.servlet",
+    "class": "WebSocketServletFactory",
+    "method": "getPolicy",
+    "signature": "WebSocketPolicy getPolicy()",
+    "type": "none"
+  },
+  {
+    "package": "org.powermock.api.mockito",
+    "class": "PowerMockito",
+    "method": "whenNew",
+    "signature": "ConstructorExpectationSetup<T> whenNew(Class<T> p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.powermock.api.mockito.expectation",
+    "class": "WithAnyArguments",
+    "method": "withAnyArguments",
+    "signature": "OngoingStubbing<ServletContextHandler> withAnyArguments()",
+    "type": "none"
+  },
+  {
+    "package": "org.powermock.reflect",
+    "class": "Whitebox",
+    "method": "getInternalState",
+    "signature": "T getInternalState(Object p0, String p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.powermock.reflect",
+    "class": "Whitebox",
+    "method": "setInternalState",
+    "signature": "void setInternalState(Object p0, String p1, Object p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "debug",
+    "signature": "void debug(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "debug",
+    "signature": "void debug(String p0, Object p1, Object p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "debug",
+    "signature": "void debug(String p0, Object[] p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "error",
+    "signature": "void error(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "error",
+    "signature": "void error(String p0, Object p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "error",
+    "signature": "void error(String p0, Throwable p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "info",
+    "signature": "void info(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "info",
+    "signature": "void info(String p0, Object p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "info",
+    "signature": "void info(String p0, Object p1, Object p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "info",
+    "signature": "void info(String p0, Object[] p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "isDebugEnabled",
+    "signature": "boolean isDebugEnabled()",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "warn",
+    "signature": "void warn(String p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "warn",
+    "signature": "void warn(String p0, Object p1, Object p2)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "Logger",
+    "method": "warn",
+    "signature": "void warn(String p0, Throwable p1)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "LoggerFactory",
+    "method": "getLogger",
+    "signature": "Logger getLogger(Class<?> p0)",
+    "type": "none"
+  },
+  {
+    "package": "org.slf4j",
+    "class": "LoggerFactory",
+    "method": "getLogger",
+    "signature": "Logger getLogger(String p0)",
+    "type": "none"
+  }
+]
