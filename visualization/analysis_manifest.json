@@ -1,0 +1,9 @@
+[
+  {
+    "project_name": "vert-x3__vertx-web_CVE-2019-17640_3.9.3",
+    "run_id": "test01",
+    "query_name": "cwe-022wLLM",
+    "display_name": "vert-x3__vertx-web_CVE-2019-17640_3.9.3 (Run: test01, Query: cwe-022wLLM)",
+    "file_path": "../output/vert-x3__vertx-web_CVE-2019-17640_3.9.3/test01/detailed_tp_analysis/llm_detailed_analysis_vert-x3__vertx-web_CVE-2019-17640_3.9.3_cwe-022wLLM.json"
+  }
+]
