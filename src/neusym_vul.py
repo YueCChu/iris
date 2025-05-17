@@ -92,6 +92,7 @@ class SAPipeline:
             debug_sink: bool = False,
             test_run: bool = False,
             no_logger: bool = False,
+            detailed_analysis_output_dir: str = None,  # <- keep for compatibility, but will override below
     ):
         # Store basic information
         self.project_name = project_name
@@ -127,6 +128,7 @@ class SAPipeline:
         self.debug_sink = debug_sink
         self.test_run = test_run
         self.no_logger = no_logger
+        self.identified_true_positive_flows = []
 
         # Setup logger
         if not self.no_logger:
@@ -248,6 +250,15 @@ class SAPipeline:
             os.makedirs(self.common_cache_path, exist_ok=True)
         self.api_labels_cache_path = f"{self.common_cache_path}/api_labels_{self.llm}.json"
         self.model = None
+
+        # Set detailed analysis output directory to fixed path
+        self.detailed_analysis_output_dir = os.path.join(
+            OUTPUT_DIR,
+            self.project_name,
+            self.run_id,
+            "detailed_tp_analysis"
+        )
+        os.makedirs(self.detailed_analysis_output_dir, exist_ok=True)
 
     def get_model(self):
         if self.model is None:
@@ -1175,9 +1186,9 @@ class SAPipeline:
             overwrite=self.overwrite or self.overwrite_posthoc_filter or self.overwrite_cwe_query_result,
             test_run=self.test_run,
             output_tp_codeflow=True,
-            tp_codeflow_output_file=os.path.join(self.final_output_path, f"tp_codeflows_{self.query}.txt")
+            tp_codeflow_output_file=os.path.join(self.final_output_path, f"tp_codeflows_{self.query}.json")
         )
-        eval_pipeline_instance.query_name = self.query # self.query 包含了当前的查询名 (e.g., "cwe-022wLLM")
+        eval_pipeline_instance.query_name = self.query
         return eval_pipeline_instance
 
     def evaluate_result(self):
@@ -1195,6 +1206,184 @@ class SAPipeline:
         eval_pipeline = self.build_evaluation_pipeline()
         eval_pipeline.run()
 
+    def _format_intermediate_steps_for_llm_input(self, intermediate_steps_list):
+        if not intermediate_steps_list:
+            return "  (No intermediate steps detailed in input JSON)"
+        formatted_steps = []
+        for step_obj in intermediate_steps_list:
+            formatted_steps.append(
+                f"  - Step {step_obj.get('step', 'N/A')}: [{step_obj.get('location', 'N/A')}] {step_obj.get('description', 'N/A')}"
+            )
+        return "\n".join(formatted_steps)
+
+    def _construct_detailed_analysis_prompt(self, tp_flow_from_json):
+        query_name = tp_flow_from_json.get('query_name', 'N/A')
+        vuln_type_initial = tp_flow_from_json.get('vulnerability_type', 'N/A')
+        source_info = tp_flow_from_json.get('source_info', 'N/A')
+        source_snippet = tp_flow_from_json.get('source_code_snippet', 'No source snippet provided.')
+        intermediate_steps_list = tp_flow_from_json.get('intermediate_steps', [])
+        intermediate_steps_formatted = self._format_intermediate_steps_for_llm_input(intermediate_steps_list)
+        sink_info = tp_flow_from_json.get('sink_info', 'N/A')
+        sink_snippet = tp_flow_from_json.get('sink_code_snippet', 'No sink snippet provided.')
+
+        code_flow_context_for_llm = f"""--- Identified True Positive Code Flow Details ---
+Query Name: {query_name}
+Vulnerability Type (from initial scan): {vuln_type_initial}
+
+Source Information:
+  Description: {source_info}
+  Code Snippet:
+```java
+{source_snippet}
+```
+
+Intermediate Steps:
+{intermediate_steps_formatted}
+
+Sink Information:
+Description: {sink_info}
+Code Snippet:
+```java
+{sink_snippet}
+```
+--- End of Identified Code Flow Details ---
+"""
+
+        system_prompt = """You are an expert security analyst and code reviewer.
+Given a True Positive code flow representing a vulnerability (detailed under 'Identified True Positive Code Flow Details'), provide a comprehensive analysis.
+Respond ONLY in JSON format with the exact keys: "vulnerability_type_llm", "vulnerability_severity", "vulnerability_path", "root_cause_analysis", "fix_suggestion_text", and "fix_example_diff".
+
+  - For "vulnerability_severity", choose strictly from "Low", "Medium", or "High".
+
+  - The "vulnerability_path" must be an object with three keys: "source" (string), "propagation" (list of strings), and "sink" (string). Populate these fields by extracting and reformatting the relevant code snippets and descriptive comments from the 'Identified True Positive Code Flow Details' provided in the user prompt. For "propagation", each item in the list should represent a distinct step, including descriptive comments and relevant code lines.
+
+  - "fix_suggestion_text" must be a list of strings, where each string is a distinct piece of advice.
+
+  - For "fix_example_diff", provide a code modification example in standard unified diff format (e.g., starting with '--- a/path/to/file.java' and '+++ b/path/to/file.java', using '-' for deletions and '+' for additions). Base the diff on the provided code snippets. If the fix involves multiple locations, focus on the most critical part (e.g., near the source or sink).
+    Ensure your entire response is a single, valid JSON object."""
+
+        user_prompt = f"""The following code flow has been identified as a True Positive vulnerability:
+
+{code_flow_context_for_llm}
+
+Based on the "Identified True Positive Code Flow Details" above, please generate a JSON object with the following precise structure and content:
+
+{{
+"vulnerability_type_llm": "string (Confirm or refine the '{vuln_type_initial}')",
+"vulnerability_severity": "string (Choose from: 'Low', 'Medium', 'High')",
+"vulnerability_path": {{
+"source": "string (Reformat the source code snippet from the input, including descriptive comments like /* SOURCE: ... */ and location markers if available in the snippet)",
+"propagation": [
+"string (For each intermediate step from the input, provide a detailed string. Include a high-level comment like /* PROPAGATION X: ... */, its location, the code line(s), and observation comments like // <---- [PATH PROPAGATION] ... If the input only provides single lines for intermediate steps, describe them clearly.)"
+],
+"sink": "string (Reformat the sink code snippet from the input, including descriptive comments like /* SINK: ... */ and location markers if available in the snippet)"
+}},
+"root_cause_analysis": "string (Explain the root cause of this vulnerability based on the provided code flow)",
+"fix_suggestion_text": [
+"string (Provide the first clear, textual recommendation for a fix)",
+"string (Provide a second textual recommendation, if applicable)"
+],
+"fix_example_diff": "string (Provide a code modification example in standard unified diff format, focusing on the most critical code snippet from the input flow)"
+}}
+
+Note: The "vulnerability_path" field in your JSON response should be populated using the structured information (source_code_snippet, intermediate_steps, sink_code_snippet) provided in the "Identified True Positive Code Flow Details" section above. Adapt the presentation with descriptive comments as shown in the example structure.
+"""
+        return [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
+
+    def analyze_true_positives_with_llm(self):
+        def extract_json_from_llm_response(response_str):
+            # Remove markdown code block wrappers
+            match = re.search(r"```json\s*([\s\S]+?)\s*```", response_str)
+            if match:
+                return match.group(1)
+            match = re.search(r"```\s*([\s\S]+?)\s*```", response_str)
+            if match:
+                return match.group(1)
+            return response_str  # fallback
+
+        eval_pipeline_for_paths = self.build_evaluation_pipeline()
+        tp_json_filename = getattr(eval_pipeline_for_paths, 'tp_codeflow_output_file', None)
+
+        if not tp_json_filename or not os.path.exists(tp_json_filename):
+            if self.project_logger:
+                expected_path = tp_json_filename if tp_json_filename else f"tp_codeflows_{self.query}.json in evaluation output directory"
+                self.project_logger.info(f"TP codeflows JSON file ({expected_path}) not found. Skipping detailed LLM analysis.")
+            return
+
+        try:
+            with open(tp_json_filename, 'r', encoding='utf-8') as f:
+                self.identified_true_positive_flows = json.load(f)
+            if self.project_logger:
+                self.project_logger.info(f"Successfully loaded {len(self.identified_true_positive_flows)} TP flows from {tp_json_filename}")
+        except Exception as e:
+            if self.project_logger:
+                self.project_logger.error(f"Failed to load or parse TP codeflows JSON from {tp_json_filename}: {e}")
+            return
+
+        if not self.identified_true_positive_flows:
+            if self.project_logger:
+                self.project_logger.info("No True Positive flows loaded for detailed LLM analysis.")
+            return
+
+        if self.project_logger:
+            self.project_logger.info(f"==> Stage 10: Performing detailed analysis on {len(self.identified_true_positive_flows)} True Positive flow(s) with LLM...")
+
+        llm_analysis_results = []
+        model = self.get_model()
+
+        for i, tp_flow_detail_from_json in enumerate(self.identified_true_positive_flows):
+            if self.project_logger:
+                self.project_logger.info(f"  Analyzing TP flow {i+1}/{len(self.identified_true_positive_flows)} (ID: {tp_flow_detail_from_json.get('id', 'N/A')})...")
+            prompt_messages = self._construct_detailed_analysis_prompt(tp_flow_detail_from_json)
+            try:
+                if "gpt" in self.llm.lower() or "gemini" in self.llm.lower():
+                    response_str = model.predict(prompt_messages, expect_json=True)
+                else:
+                    response_str = model.predict(prompt_messages)
+                # --- Apply extract_json_from_llm_response before json.loads ---
+                response_str_clean = extract_json_from_llm_response(response_str)
+                analysis_data = json.loads(response_str_clean)
+                llm_analysis_results.append({
+                    "tp_flow_id": tp_flow_detail_from_json.get('id'),
+                    "query_name": tp_flow_detail_from_json.get('query_name'),
+                    "llm_detailed_analysis": analysis_data
+                })
+                if self.project_logger:
+                    self.project_logger.info(f"  Successfully analyzed TP flow {i+1}. Severity: {analysis_data.get('vulnerability_severity', 'N/A')}")
+            except json.JSONDecodeError:
+                if self.project_logger:
+                    self.project_logger.error(f"  Failed to parse LLM JSON response for TP flow {i+1} (ID: {tp_flow_detail_from_json.get('id', 'N/A')}). Raw response:\n{response_str[:500]}...")
+                llm_analysis_results.append({
+                    "tp_flow_id": tp_flow_detail_from_json.get('id'),
+                    "llm_analysis_error": "Failed to parse LLM response as JSON.",
+                    "raw_response": response_str
+                })
+            except Exception as e:
+                if self.project_logger:
+                    self.project_logger.error(f"  Error during LLM call for TP flow {i+1} (ID: {tp_flow_detail_from_json.get('id', 'N/A')}): {e}")
+                llm_analysis_results.append({
+                    "tp_flow_id": tp_flow_detail_from_json.get('id'),
+                    "llm_analysis_error": str(e)
+                })
+
+        if self.detailed_analysis_output_dir and llm_analysis_results:
+            output_file_path = os.path.join(
+                self.detailed_analysis_output_dir,
+                f"llm_detailed_analysis_{self.project_name}_{self.query}.json"
+            )
+            try:
+                with open(output_file_path, 'w', encoding='utf-8') as f:
+                    json.dump(llm_analysis_results, f, indent=2, ensure_ascii=False)
+                if self.project_logger:
+                    self.project_logger.info(f"Saved detailed LLM analysis for TPs to: {output_file_path}")
+            except Exception as e:
+                if self.project_logger:
+                    self.project_logger.error(f"Failed to save detailed LLM analysis to {output_file_path}: {e}")
+        elif self.project_logger and not llm_analysis_results and self.identified_true_positive_flows:
+            self.project_logger.info("No LLM analysis results were successfully generated to save, though TPs were processed.")
+        elif self.project_logger and not self.identified_true_positive_flows:
+            self.project_logger.info("No TP flows were identified, so no LLM analysis results to save.")
+
     def debug_result(self):
         if self.test_run:
             return
@@ -1202,13 +1391,13 @@ class SAPipeline:
         # Debug source information
         if self.debug_source:
             if self.overwrite or self.overwrite_debug_info or not os.path.exists(f"{self.project_output_path}/fetch_sources/cwe-{self.cwe_id}/results.csv"):
-                self.project_logger.info("==> Stage 10.1: Debug sources...")
+                self.project_logger.info("==> Stage 11.1: Debug sources...")
                 self.run_simple_codeql_query("fetch_sources", suffix=f"cwe-{self.cwe_id}", dyn_queries={"MySources.qll": self.build_source_qll_with_enumeration()})
 
         # Debug sink information
         if self.debug_sink:
             if self.overwrite or self.overwrite_debug_info or not os.path.exists(f"{self.project_output_path}/fetch_sinks/cwe-{self.cwe_id}/results.csv"):
-                self.project_logger.info("==> Stage 10.1: Debug sinks...")
+                self.project_logger.info("==> Stage 11.2: Debug sinks...")
                 self.run_simple_codeql_query("fetch_sinks", suffix=f"cwe-{self.cwe_id}", dyn_queries={"MySinks.qll": self.build_sink_qll_with_enumeration()})
 
     def run(self):
@@ -1222,6 +1411,7 @@ class SAPipeline:
             self.master_logger.info(f"==> Cached final result found; skipping")
             self.post_process_cwe_query_result()
             self.evaluate_result()
+            self.analyze_true_positives_with_llm()
             self.debug_result()
             exit(1)
 
@@ -1252,7 +1442,10 @@ class SAPipeline:
         # 9. Evaluate performance
         self.evaluate_result()
 
-        # 10. Debuggging
+        # 10. Detailed analysis of TPs with LLM
+        self.analyze_true_positives_with_llm()
+
+        # 11. Debugging
         self.debug_result()
 
 
@@ -1290,9 +1483,9 @@ if __name__ == '__main__':
     parser.add_argument("--debug-source", action="store_true")
     parser.add_argument("--debug-sink", action="store_true")
     parser.add_argument("--test-run", action="store_true")
+    parser.add_argument("--detailed_analysis_output_dir", type=str, default=None, help="Directory to save detailed TP analysis JSON files.")
     args = parser.parse_args()
 
-    # Set basic properties
     args.use_exhaustive_qll = True
 
     pipeline = SAPipeline(
@@ -1328,6 +1521,7 @@ if __name__ == '__main__':
         debug_source=args.debug_source,
         debug_sink=args.debug_sink,
         test_run=args.test_run,
+        detailed_analysis_output_dir=args.detailed_analysis_output_dir
     )
 
     pipeline.run()
